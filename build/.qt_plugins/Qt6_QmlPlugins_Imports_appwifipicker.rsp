@@ -1,0 +1,14 @@
+-rootPath
+/home/talksik/code/wifipicker
+-cmake-output
+-output-file
+/home/talksik/code/wifipicker/build/.qt_plugins/Qt6_QmlPlugins_Imports_appwifipicker.cmake
+-importPath
+/home/talksik/code/wifipicker/build/wifipicker
+-importPath
+/home/talksik/code/wifipicker/build
+-importPath
+/home/talksik/Qt/6.6.1/gcc_64/./qml
+-qrcFiles
+/home/talksik/code/wifipicker/build/.rcc/qmake_wifipicker.qrc
+/home/talksik/code/wifipicker/build/.rcc/appwifipicker_raw_qml_0.qrc

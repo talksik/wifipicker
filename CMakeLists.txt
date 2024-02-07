@@ -10,6 +10,8 @@ qt_standard_project_setup()
 
 qt_add_executable(appwifipicker
     main.cpp
+    NetworkScanner.h
+    NetworkScanner.cpp
 )
 
 qt_add_qml_module(appwifipicker

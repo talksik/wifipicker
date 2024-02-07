@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/wifipicker">/home/talksik/code/wifipicker/build/wifipicker</file>
+
+  </qresource>
+</RCC>

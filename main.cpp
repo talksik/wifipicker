@@ -1,33 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <qqml.h>
-#include <iostream>
 #include <QtQuick/qquickitem.h>
 #include <QtQuick/qquickview.h>
-#include <QObject>
-
-// class Network
-// {
-// public:
-//     enum NetworkStatus {
-//         Connected = 0,
-//         Available
-//     };
-
-//     Network(const QString &name, const NetworkStatus &status);
-
-//     QString name;
-//     NetworkStatus status;
-// };
-
-// class NetworkScanner : public QObject
-// {
-//     Q_OBJECT
-// public slots:
-//     void scan() {
-//         qDebug() << "Called the C++ Network scanner class" << Qt::endl;
-//     }
-// };
+#include <NetworkScanner.h>
 
 int main(int argc, char *argv[])
 {
@@ -43,13 +19,10 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.load(url);
 
-    // QObject *rootObject = engine.rootObjects().first();
-    // //QQuickWindow *window = qobject_cast<QQuickWindow*>(rootObject);
-
-    // NetworkScanner networkScanner;
-
-    // QObject::connect(rootObject, SIGNAL(scanNetworks()), &networkScanner, SLOT(scan()));
-
+    QObject *rootObject = engine.rootObjects().first();
+    // QQuickWindow *window = qobject_cast<QQuickWindow*>(rootObject);
+    NetworkScanner networkScanner;
+    QObject::connect(rootObject, SIGNAL(scanNetworks()), &networkScanner, SLOT(scan()));
 
     return app.exec();
 }
