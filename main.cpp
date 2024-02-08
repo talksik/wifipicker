@@ -9,16 +9,23 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
+    NetworksModel model;
+
     QQuickView view;
     view.setResizeMode(QQuickView::SizeRootObjectToView);
-    //view.setInitialProperties({{"model", QVariant::fromValue(&model)}});
-    view.setSource(QUrl("qrc:/qt/qml/abstractitemmodel/view.qml"));
+    view.setInitialProperties({{"networksModel", QVariant::fromValue(&model)}});
+    view.setSource(QUrl("qrc:/wifipicker/Main.qml"));
     view.show();
 
-    QQuickItem *rootObject = view.rootObject();
-    // QQuickWindow *window = qobject_cast<QQuickWindow*>(rootObject);
-    NetworkScanner networkScanner;
-    QObject::connect(rootObject, SIGNAL(scanNetworks()), &networkScanner, SLOT(scan()));
+    if (!view.rootObject())
+    {
+        qDebug() << "No root object found" << Qt::endl;
+        return -1;
+    }
+
+    QObject *rootObject = view.rootObject();
+    QObject::connect(rootObject, SIGNAL(scanNetworks()), &model, SLOT(scan()));
+
 
     return app.exec();
 }

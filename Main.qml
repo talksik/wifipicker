@@ -1,18 +1,32 @@
 import QtQuick
 import QtQuick.Controls
 
-Window {
+Rectangle {
     id: window
     width: 640
     height: 480
     visible: true
-    title: qsTr("WIFI picker")
+
+    required property var networksModel
 
     signal scanNetworks()
 
     Button {
-        id: scanButton
+        id: scanbutton
         text: "Scan for networks"
         onClicked: window.scanNetworks()
+    }
+
+    ListView {
+        id: listview
+        objectName: "listview"
+        model: parent.networksModel
+        delegate: Rectangle {
+            required property string name
+
+            Text {
+                text: parent.name
+            }
+        }
     }
 }
