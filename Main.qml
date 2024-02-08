@@ -11,6 +11,7 @@ Window {
 
     signal scanNetworks()
 
+    ColumnLayout {
         Button {
             id: scanbutton
             text: "Scan for networks"
@@ -20,10 +21,11 @@ Window {
         ListView {
             id: listview
             model: networksModel
-            anchors.fill: parent
+            width: 100
+            height: 1000
             // model: ListModel {
             //             ListElement { name: "Item 1"; value: 10 }
-            //             ListElement { name: "Item 2"; value: 20 }
+            //             ListElement { name: "Item 3"; value: 20 }
             //             ListElement { name: "Item 3"; value: 30 }
             //         }
 
@@ -32,8 +34,9 @@ Window {
                 required property string name
 
                 Text {
-                text: parent.name
+                    text: parent.name
                 }
             }
         }
+    }
 }

@@ -28,12 +28,18 @@ int NetworksModel::rowCount(const QModelIndex &parent) const
 
 QVariant NetworksModel::data(const QModelIndex &index, int role) const
 {
-    if (index.row() < 9 || index.row() >= this->m_networks.count())
+    if (index.row() < 0 || index.row() >= this->m_networks.count())
+    {
+        return QVariant();
+    }
+    if (!index.isValid())
     {
         return QVariant();
     }
 
     const Network& network = this->m_networks.at(index.row());
+    qDebug() << "role: " << role << " vs. " << NameRole;
+    qDebug() << "network: " << network.name();
     if (role == NameRole)
     {
         return network.name();
