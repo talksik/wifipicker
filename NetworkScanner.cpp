@@ -18,9 +18,6 @@ NetworksModel::NetworksModel(QObject *parent)
 :
     QAbstractListModel(parent)
 {
-    QList<Network> networks;
-    networks.append(Network("Gita test"));
-    this->m_networks = networks;
 }
 
 int NetworksModel::rowCount(const QModelIndex &parent) const
@@ -47,12 +44,18 @@ QVariant NetworksModel::data(const QModelIndex &index, int role) const
 
 void NetworksModel::scan()
 {
+    beginInsertRows(QModelIndex(), this->rowCount(), this->rowCount());
+
     QList<Network> networks = this->m_networkScanner.scanForNetworks();
     for (const Network& network: networks)
     {
         qDebug() << "Got network: " << network.name() << Qt::endl;
+        this->m_networks << network;
     }
-    this->m_networks = networks;
+
+    qDebug() << "now have " << this->m_networks.size() << Qt::endl;
+
+    endInsertRows();
 }
 
 QHash<int, QByteArray> NetworksModel::roleNames() const

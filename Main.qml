@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 
 Window {
     id: window
@@ -8,34 +9,31 @@ Window {
     visible: true
     title: "WIFI Picker"
 
-    property var model
-
     signal scanNetworks()
 
-    Button {
-        id: scanbutton
-        text: "Scan for networks"
-        onClicked: window.scanNetworks()
-    }
+        Button {
+            id: scanbutton
+            text: "Scan for networks"
+            onClicked: window.scanNetworks()
+        }
 
-    ListView {
-        id: listview
-        model: window.model
-        width: 100
-        height: 200
-        // model: ListModel {
-        //             ListElement { name: "Item 1"; value: 10 }
-        //             ListElement { name: "Item 2"; value: 20 }
-        //             ListElement { name: "Item 3"; value: 30 }
-        //         }
+        ListView {
+            id: listview
+            model: networksModel
+            anchors.fill: parent
+            // model: ListModel {
+            //             ListElement { name: "Item 1"; value: 10 }
+            //             ListElement { name: "Item 2"; value: 20 }
+            //             ListElement { name: "Item 3"; value: 30 }
+            //         }
 
-        delegate: Item {
-            height: 20
-            required property string name
+            delegate: Item {
+                height: 20
+                required property string name
 
-            Text {
+                Text {
                 text: parent.name
+                }
             }
         }
-    }
 }
