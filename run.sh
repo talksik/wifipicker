@@ -11,3 +11,5 @@ cmake -G "Unix Makefiles" -DCMAKE_PREFIX_PATH=$HOME/Qt/6.6.1/gcc_64/ \
 make
 
 cp ./compile_commands.json ../
+
+./appwifipicker

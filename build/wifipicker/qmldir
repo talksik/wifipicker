@@ -1,5 +1,0 @@
-module wifipicker
-typeinfo appwifipicker.qmltypes
-prefer :/wifipicker/
-Main 1.0 Main.qml
-

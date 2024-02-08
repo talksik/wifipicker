@@ -9,17 +9,13 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QQmlApplicationEngine engine;
-    const QUrl url(u"qrc:/wifipicker/Main.qml"_qs);
-    QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreationFailed,
-        &app,
-        []() { QCoreApplication::exit(-1); },
-        Qt::QueuedConnection);
-    engine.load(url);
+    QQuickView view;
+    view.setResizeMode(QQuickView::SizeRootObjectToView);
+    //view.setInitialProperties({{"model", QVariant::fromValue(&model)}});
+    view.setSource(QUrl("qrc:/qt/qml/abstractitemmodel/view.qml"));
+    view.show();
 
-    QObject *rootObject = engine.rootObjects().first();
+    QQuickItem *rootObject = view.rootObject();
     // QQuickWindow *window = qobject_cast<QQuickWindow*>(rootObject);
     NetworkScanner networkScanner;
     QObject::connect(rootObject, SIGNAL(scanNetworks()), &networkScanner, SLOT(scan()));
