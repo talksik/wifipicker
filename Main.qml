@@ -23,11 +23,6 @@ Window {
             model: networksModel
             width: 100
             height: 1000
-            // model: ListModel {
-            //             ListElement { name: "Item 1"; value: 10 }
-            //             ListElement { name: "Item 3"; value: 20 }
-            //             ListElement { name: "Item 3"; value: 30 }
-            //         }
 
             delegate: Item {
                 height: 20

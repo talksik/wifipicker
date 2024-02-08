@@ -50,18 +50,18 @@ QVariant NetworksModel::data(const QModelIndex &index, int role) const
 
 void NetworksModel::scan()
 {
-    beginInsertRows(QModelIndex(), this->rowCount(), this->rowCount());
+    beginResetModel();
 
     QList<Network> networks = this->m_networkScanner.scanForNetworks();
     for (const Network& network: networks)
     {
         qDebug() << "Got network: " << network.name() << Qt::endl;
-        this->m_networks << network;
     }
+    this->m_networks = networks;
 
     qDebug() << "now have " << this->m_networks.size() << Qt::endl;
 
-    endInsertRows();
+    endResetModel();
 }
 
 QHash<int, QByteArray> NetworksModel::roleNames() const
