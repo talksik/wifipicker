@@ -39,6 +39,9 @@ public:
 public slots:
     void scan();
 
+protected:
+    QHash<int, QByteArray> roleNames() const;
+
 private:
     QList<Network> m_networks;
     NetworkScanner m_networkScanner;

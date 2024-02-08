@@ -1,13 +1,14 @@
 import QtQuick
 import QtQuick.Controls
 
-Rectangle {
+Window {
     id: window
     width: 640
     height: 480
     visible: true
+    title: "WIFI Picker"
 
-    required property var networksModel
+    property var model
 
     signal scanNetworks()
 
@@ -19,9 +20,17 @@ Rectangle {
 
     ListView {
         id: listview
-        objectName: "listview"
-        model: parent.networksModel
-        delegate: Rectangle {
+        model: window.model
+        width: 100
+        height: 200
+        // model: ListModel {
+        //             ListElement { name: "Item 1"; value: 10 }
+        //             ListElement { name: "Item 2"; value: 20 }
+        //             ListElement { name: "Item 3"; value: 30 }
+        //         }
+
+        delegate: Item {
+            height: 20
             required property string name
 
             Text {
