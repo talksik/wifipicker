@@ -154,10 +154,24 @@ CMakeFiles/appwifipicker.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/appwifipicker.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/talksik/code/wifipicker/main.cpp -o CMakeFiles/appwifipicker.dir/main.cpp.s
 
+CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o: CMakeFiles/appwifipicker.dir/flags.make
+CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o: ../NetworkScanner.cpp
+CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o: CMakeFiles/appwifipicker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o -MF CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o.d -o CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o -c /home/talksik/code/wifipicker/NetworkScanner.cpp
+
+CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/talksik/code/wifipicker/NetworkScanner.cpp > CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.i
+
+CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/talksik/code/wifipicker/NetworkScanner.cpp -o CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.s
+
 CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o: CMakeFiles/appwifipicker.dir/flags.make
 CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o: appwifipicker_qmltyperegistrations.cpp
 CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o: CMakeFiles/appwifipicker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o -MF CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o.d -o CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o -c /home/talksik/code/wifipicker/build/appwifipicker_qmltyperegistrations.cpp
 
 CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.i: cmake_force
@@ -171,7 +185,7 @@ CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.s: cmake_for
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o: CMakeFiles/appwifipicker.dir/flags.make
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o: .rcc/qrc_qmake_wifipicker.cpp
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o: CMakeFiles/appwifipicker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o -MF CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o.d -o CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o -c /home/talksik/code/wifipicker/build/.rcc/qrc_qmake_wifipicker.cpp
 
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.i: cmake_force
@@ -185,7 +199,7 @@ CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.s: cmake_force
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o: CMakeFiles/appwifipicker.dir/flags.make
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o: .rcc/qmlcache/appwifipicker_qmlcache_loader.cpp
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o: CMakeFiles/appwifipicker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o -MF CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o.d -o CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o -c /home/talksik/code/wifipicker/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp
 
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.i: cmake_force
@@ -199,7 +213,7 @@ CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.c
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o: CMakeFiles/appwifipicker.dir/flags.make
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o: .rcc/qmlcache/appwifipicker_Main_qml.cpp
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o: CMakeFiles/appwifipicker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o -MF CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o.d -o CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.o -c /home/talksik/code/wifipicker/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp
 
 CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.i: cmake_force
@@ -213,7 +227,7 @@ CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_Main_qml.cpp.s: c
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o: CMakeFiles/appwifipicker.dir/flags.make
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o: .rcc/qrc_appwifipicker_raw_qml_0.cpp
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o: CMakeFiles/appwifipicker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o -MF CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o.d -o CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.o -c /home/talksik/code/wifipicker/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp
 
 CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.i: cmake_force
@@ -228,6 +242,7 @@ CMakeFiles/appwifipicker.dir/build/.rcc/qrc_appwifipicker_raw_qml_0.cpp.s: cmake
 appwifipicker_OBJECTS = \
 "CMakeFiles/appwifipicker.dir/appwifipicker_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/appwifipicker.dir/main.cpp.o" \
+"CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o" \
 "CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o" \
 "CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o" \
 "CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o" \
@@ -239,6 +254,7 @@ appwifipicker_EXTERNAL_OBJECTS =
 
 appwifipicker: CMakeFiles/appwifipicker.dir/appwifipicker_autogen/mocs_compilation.cpp.o
 appwifipicker: CMakeFiles/appwifipicker.dir/main.cpp.o
+appwifipicker: CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o
 appwifipicker: CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o
 appwifipicker: CMakeFiles/appwifipicker.dir/build/.rcc/qrc_qmake_wifipicker.cpp.o
 appwifipicker: CMakeFiles/appwifipicker.dir/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp.o
@@ -255,7 +271,7 @@ appwifipicker: /home/talksik/Qt/6.6.1/gcc_64/lib/libQt6Core.so.6.6.1
 appwifipicker: /usr/lib/x86_64-linux-gnu/libGLX.so
 appwifipicker: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 appwifipicker: CMakeFiles/appwifipicker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable appwifipicker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/talksik/code/wifipicker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable appwifipicker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/appwifipicker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

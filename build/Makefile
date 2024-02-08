@@ -330,6 +330,30 @@ appwifipicker_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appwifipicker_autogen.dir/build.make CMakeFiles/appwifipicker_autogen.dir/build
 .PHONY : appwifipicker_autogen/fast
 
+NetworkScanner.o: NetworkScanner.cpp.o
+.PHONY : NetworkScanner.o
+
+# target to build an object file
+NetworkScanner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appwifipicker.dir/build.make CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o
+.PHONY : NetworkScanner.cpp.o
+
+NetworkScanner.i: NetworkScanner.cpp.i
+.PHONY : NetworkScanner.i
+
+# target to preprocess a source file
+NetworkScanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appwifipicker.dir/build.make CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.i
+.PHONY : NetworkScanner.cpp.i
+
+NetworkScanner.s: NetworkScanner.cpp.s
+.PHONY : NetworkScanner.s
+
+# target to generate assembly for a file
+NetworkScanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appwifipicker.dir/build.make CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.s
+.PHONY : NetworkScanner.cpp.s
+
 appwifipicker_autogen/mocs_compilation.o: appwifipicker_autogen/mocs_compilation.cpp.o
 .PHONY : appwifipicker_autogen/mocs_compilation.o
 
@@ -523,6 +547,9 @@ help:
 	@echo "... appwifipicker_qmltyperegistration"
 	@echo "... appwifipicker"
 	@echo "... appwifipicker_tooling"
+	@echo "... NetworkScanner.o"
+	@echo "... NetworkScanner.i"
+	@echo "... NetworkScanner.s"
 	@echo "... appwifipicker_autogen/mocs_compilation.o"
 	@echo "... appwifipicker_autogen/mocs_compilation.i"
 	@echo "... appwifipicker_autogen/mocs_compilation.s"

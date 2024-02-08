@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/appwifipicker_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/appwifipicker_autogen.dir/ParseCache.txt"
   "appwifipicker_autogen"
+  "CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o"
+  "CMakeFiles/appwifipicker.dir/NetworkScanner.cpp.o.d"
   "CMakeFiles/appwifipicker.dir/appwifipicker_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/appwifipicker.dir/appwifipicker_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/appwifipicker.dir/appwifipicker_qmltyperegistrations.cpp.o"

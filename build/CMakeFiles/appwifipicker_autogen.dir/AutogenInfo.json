@@ -738,7 +738,15 @@
 	"CMAKE_SOURCE_DIR" : "/home/talksik/code/wifipicker",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"/home/talksik/code/wifipicker/NetworkScanner.h",
+			"MU",
+			"EWIEGA46WW/moc_NetworkScanner.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/talksik/code/wifipicker/build/appwifipicker_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/talksik/code/wifipicker/build/appwifipicker_autogen/mocs_compilation.cpp",
@@ -822,6 +830,7 @@
 	"SETTINGS_FILE" : "/home/talksik/code/wifipicker/build/CMakeFiles/appwifipicker_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/talksik/code/wifipicker/NetworkScanner.cpp", "MU", null ],
 		[
 			"/home/talksik/code/wifipicker/build/.rcc/qmlcache/appwifipicker_qmlcache_loader.cpp",
 			"MU",
