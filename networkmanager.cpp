@@ -1,10 +1,11 @@
-#include "networkscanner.h"
+#include "networkmanager.h"
 #include <iostream>
 #include <QAbstractListModel>
 #include <iwlib.h>
 #include <string>
 #include <vector>
 #include <sstream>
+#include <network.h>
 
 std::string exec(const char* cmd) {
     std::array<char, 128> buffer;
@@ -19,7 +20,7 @@ std::string exec(const char* cmd) {
     return result;
 }
 
-QList<Network> NetworkScanner::scanForNetworks()
+QList<Network> NetworkManager::scanForNetworks()
 {
     std::cout << "Called the C++ Network scanner class" << std::endl;
 

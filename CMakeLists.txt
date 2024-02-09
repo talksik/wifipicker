@@ -16,8 +16,8 @@ qt_standard_project_setup()
 
 qt_add_executable(appwifipicker
     main.cpp
-    networkscanner.h
-    networkscanner.cpp
+    networkmanager.h
+    networkmanager.cpp
     networksmodel.cpp
     networksmodel.h
     network.cpp

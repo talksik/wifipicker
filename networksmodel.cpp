@@ -36,7 +36,7 @@ void NetworksModel::scan()
 {
     beginResetModel();
 
-    QList<Network> networks = this->m_networkScanner.scanForNetworks();
+    QList<Network> networks = this->m_networkmanager.scanForNetworks();
     this->m_networks = networks;
 
     endResetModel();

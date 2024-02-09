@@ -2,7 +2,7 @@
 #define NETWORKSMODEL_H
 
 #include <QAbstractListModel>
-#include "networkscanner.h"
+#include "networkmanager.h"
 
 class NetworksModel : public QAbstractListModel
 {
@@ -25,7 +25,7 @@ protected:
 
 private:
     QList<Network> m_networks;
-    NetworkScanner m_networkScanner;
+    NetworkManager m_networkmanager;
 };
 
 #endif // NETWORKSMODEL_H
