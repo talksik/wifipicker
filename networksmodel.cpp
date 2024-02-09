@@ -24,8 +24,6 @@ QVariant NetworksModel::data(const QModelIndex &index, int role) const
     }
 
     const Network& network = this->m_networks.at(index.row());
-    qDebug() << "role: " << role << " vs. " << NameRole;
-    qDebug() << "network: " << network.name();
     if (role == NameRole)
     {
         return network.name();
@@ -39,13 +37,7 @@ void NetworksModel::scan()
     beginResetModel();
 
     QList<Network> networks = this->m_networkScanner.scanForNetworks();
-    for (const Network& network: networks)
-    {
-        qDebug() << "Got network: " << network.name() << Qt::endl;
-    }
     this->m_networks = networks;
-
-    qDebug() << "now have " << this->m_networks.size() << Qt::endl;
 
     endResetModel();
 }

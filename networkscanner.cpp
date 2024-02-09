@@ -38,7 +38,6 @@ QList<Network> NetworkScanner::scanForNetworks()
     }
 
     for (const std::string &ssid : ssids) {
-        std::cout << ssid << std::endl;
         Network newNetwork = Network(ssid.c_str());
         networks.append(newNetwork);
     }
