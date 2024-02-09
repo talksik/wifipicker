@@ -10,6 +10,7 @@ Window {
     title: "WIFI Picker"
 
     signal scanNetworks()
+    signal connectToNetwork(networkName: string, password: string)
 
     ColumnLayout {
         id: layout
@@ -27,7 +28,15 @@ Window {
 
         Text {
             text: "Loading"
+            width: 100
             visible: layout.isLoading
+        }
+
+        TextInput {
+            id: passwordInput
+            text: "enter password"
+            selectionColor: "blue"
+            width: 500
         }
 
         ListView {
@@ -75,7 +84,10 @@ Window {
                             Button {
                                 visible: !listItem.isConnected && listItem.hovered
                                 text: "Connect"
-                                onClicked: console.log("connecting to " + listItem.name)
+                                onClicked: {
+                                    console.log("connecting to " + listItem.name)
+                                    window.connectToNetwork(listItem.name, passwordInput.text)
+                                }
                             }
                         }
                     }

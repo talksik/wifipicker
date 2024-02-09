@@ -48,3 +48,25 @@ QList<Network> NetworkManager::scanForNetworks()
 
     return networks;
 }
+
+bool NetworkManager::isWifiEnabled()
+{
+    std::string result = exec("nmcli radio wifi");
+    if (result.find("enabled") != std::string::npos)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+bool NetworkManager::connect(std::string ssid, std::string password)
+{
+    try {
+        std::string command = "nmcli device wifi connect \"" + ssid + "\" password \"" + password + "\"";
+        std::string result = exec(command.c_str());
+        return true;
+    } catch(...) {
+        return false;
+    }
+}

@@ -48,3 +48,8 @@ QHash<int, QByteArray> NetworksModel::roleNames() const
     roles[NetworksModel::NetworkRoles::NameRole] = "name";
     return roles;
 }
+
+void NetworksModel::connectToNetwork(const QString &ssid, const QString &password)
+{
+    bool success = this->m_networkmanager.connect(ssid.toStdString(), password.toStdString());
+}

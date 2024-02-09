@@ -19,6 +19,7 @@ public:
 
 public slots:
     void scan();
+    void connectToNetwork(const QString &ssid, const QString &password);
 
 protected:
     QHash<int, QByteArray> roleNames() const;

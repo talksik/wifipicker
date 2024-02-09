@@ -5,6 +5,7 @@
 #include <QtQuick/qquickview.h>
 #include <networksmodel.h>
 #include <QQmlContext>
+#include <QString>
 
 int main(int argc, char *argv[])
 {
@@ -31,6 +32,7 @@ int main(int argc, char *argv[])
     }
 
     QObject::connect(rootObject, SIGNAL(scanNetworks()), &model, SLOT(scan()));
+    QObject::connect(rootObject, SIGNAL(connectToNetwork(QString, QString)), &model, SLOT(connectToNetwork(QString, QString)));
 
     return app.exec();
 }
