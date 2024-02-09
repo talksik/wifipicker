@@ -38,11 +38,33 @@ Window {
             height: 1000
 
             delegate: Item {
+                id: listItem
                 height: 20
+                width: 100
+
+                property bool hovered: false
                 required property string name
 
-                Text {
-                    text: parent.name
+                Rectangle {
+                    anchors.fill: parent
+                    color: hovered ? "blue" : "transparent"
+
+                    Text {
+                        text: listItem.name
+                        color: listItem.hovered ? "white" : "black"
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onEntered: listItem.hovered = true
+                        onExited: listItem.hovered = false
+                        onClicked: console.log("Clicked!")
+                    }
+
+                    transitions: Transition {
+                        ColorAnimation { target: parent; property: "color"; duration: 200 }
+                    }
                 }
             }
         }
