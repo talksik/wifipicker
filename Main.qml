@@ -12,14 +12,27 @@ Window {
     signal scanNetworks()
 
     ColumnLayout {
+        id: layout
+        property bool isLoading: false
+
         Button {
             id: scanbutton
             text: "Scan for networks"
-            onClicked: window.scanNetworks()
+            onClicked: {
+                layout.isLoading = true;
+                window.scanNetworks();
+                layout.isLoading = false;
+            }
+        }
+
+        Text {
+            text: "Loading"
+            visible: layout.isLoading
         }
 
         ListView {
             id: listview
+            visible: !layout.isLoading
             model: networksModel
             width: 100
             height: 1000
