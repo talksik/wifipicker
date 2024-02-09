@@ -40,30 +40,44 @@ Window {
             delegate: Item {
                 id: listItem
                 height: 20
-                width: 100
+                width: 400
 
                 property bool hovered: false
                 required property string name
+                property bool isConnected: false
 
-                Rectangle {
+                MouseArea {
                     anchors.fill: parent
-                    color: hovered ? "blue" : "transparent"
-
-                    Text {
-                        text: listItem.name
-                        color: listItem.hovered ? "white" : "black"
+                    hoverEnabled: true
+                    onEntered: {
+                        console.log("on hover")
+                        listItem.hovered = true
                     }
+                    onExited: listItem.hovered = false
+                    onClicked: console.log("Clicked!")
 
-                    MouseArea {
+                    Rectangle {
                         anchors.fill: parent
-                        hoverEnabled: true
-                        onEntered: listItem.hovered = true
-                        onExited: listItem.hovered = false
-                        onClicked: console.log("Clicked!")
-                    }
+                        color: listItem.hovered ? "blue" : "transparent"
 
-                    transitions: Transition {
-                        ColorAnimation { target: parent; property: "color"; duration: 200 }
+                        transitions: Transition {
+                            ColorAnimation { target: parent; property: "color"; duration: 200 }
+                        }
+
+                        RowLayout {
+                            anchors.fill: parent
+
+                            Text {
+                                Layout.fillWidth: true
+                                text: listItem.name
+                                color: listItem.hovered ? "white" : "black"
+                            }
+                            Button {
+                                visible: !listItem.isConnected
+                                text: "Connect"
+                                onClicked: console.log("connecting to " + listItem.name)
+                            }
+                        }
                     }
                 }
             }
