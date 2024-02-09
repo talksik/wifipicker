@@ -1,27 +1,8 @@
-#ifndef NETWORKSCANNER_H
-#define NETWORKSCANNER_H
+#ifndef NETWORKSMODEL_H
+#define NETWORKSMODEL_H
 
-#endif // NETWORKSCANNER_H
-
-#include <QObject>
 #include <QAbstractListModel>
-
-class Network
-{
-public:
-    Network(const QString &name);
-
-    QString name() const;
-private:
-    QString m_name;
-};
-
-class NetworkScanner : public QObject
-{
-    Q_OBJECT
-public:
-    QList<Network> scanForNetworks();
-};
+#include "networkscanner.h"
 
 class NetworksModel : public QAbstractListModel
 {
@@ -46,3 +27,5 @@ private:
     QList<Network> m_networks;
     NetworkScanner m_networkScanner;
 };
+
+#endif // NETWORKSMODEL_H

@@ -4,20 +4,28 @@ project(wifipicker VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Core Gui Qml Quick)
+find_package(Qt6 6.4 REQUIRED COMPONENTS
+    Core
+    Gui
+    Qml
+    Quick
+    Network
+)
 
 qt_standard_project_setup()
 
 qt_add_executable(appwifipicker
     main.cpp
-    NetworkScanner.h
-    NetworkScanner.cpp
+    networkscanner.h
+    networkscanner.cpp
 )
 
 qt_add_qml_module(appwifipicker
     URI wifipicker
     VERSION 1.0
     QML_FILES Main.qml
+    SOURCES networksmodel.h networksmodel.cpp
+    SOURCES network.h network.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -36,6 +44,7 @@ target_link_libraries(appwifipicker PRIVATE
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
+    Qt6::Network
 )
 
 include(GNUInstallDirs)

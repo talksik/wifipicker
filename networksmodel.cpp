@@ -1,18 +1,4 @@
-#include "NetworkScanner.h"
-#include <iostream>
-#include <QAbstractListModel>
-
-QList<Network> NetworkScanner::scanForNetworks()
-{
-    std::cout << "Called the C++ Network scanner class" << std::endl;
-
-    QList<Network> networks;
-
-    Network example1 = Network("Gita 2.4Ghz");
-    networks.append(example1);
-
-    return networks;
-}
+#include "networksmodel.h"
 
 NetworksModel::NetworksModel(QObject *parent)
 :
@@ -69,14 +55,4 @@ QHash<int, QByteArray> NetworksModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[NetworksModel::NetworkRoles::NameRole] = "name";
     return roles;
-}
-
-Network::Network(const QString &name)
-    : m_name(name)
-{
-}
-
-QString Network::name() const
-{
-    return this->m_name;
 }

@@ -3,7 +3,7 @@
 #include <qqml.h>
 #include <QtQuick/qquickitem.h>
 #include <QtQuick/qquickview.h>
-#include <NetworkScanner.h>
+#include <networksmodel.h>
 #include <QQmlContext>
 
 int main(int argc, char *argv[])
@@ -11,8 +11,6 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     NetworksModel model;
-    model.scan();
-    qDebug() << "now has " << model.rowCount() << Qt::endl;
 
     QQmlApplicationEngine engine;
     const QUrl url(u"qrc:/wifipicker/Main.qml"_qs);
