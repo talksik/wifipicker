@@ -73,7 +73,7 @@ Window {
                                 color: listItem.hovered ? "white" : "black"
                             }
                             Button {
-                                visible: !listItem.isConnected
+                                visible: !listItem.isConnected && listItem.hovered
                                 text: "Connect"
                                 onClicked: console.log("connecting to " + listItem.name)
                             }
