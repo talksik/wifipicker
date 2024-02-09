@@ -34,7 +34,10 @@ QList<Network> NetworkScanner::scanForNetworks()
     std::istringstream iss(result);
     std::string line;
     while (std::getline(iss, line)) {
-        ssids.push_back(line);
+        if (!line.empty() && line != "O.o")
+        {
+            ssids.push_back(line);
+        }
     }
 
     for (const std::string &ssid : ssids) {
