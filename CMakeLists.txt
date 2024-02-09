@@ -18,14 +18,16 @@ qt_add_executable(appwifipicker
     main.cpp
     networkscanner.h
     networkscanner.cpp
+    networksmodel.cpp
+    networksmodel.h
+    network.cpp
+    network.h
 )
 
 qt_add_qml_module(appwifipicker
     URI wifipicker
     VERSION 1.0
     QML_FILES Main.qml
-    SOURCES networksmodel.h networksmodel.cpp
-    SOURCES network.h network.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
